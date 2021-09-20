@@ -26,6 +26,7 @@ def index():
 
 @app.route('/live') 
 def liveVideo():
+    print("==========",genFrames())
     return Response(genFrames(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__=="__main__":
